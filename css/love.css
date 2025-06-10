@@ -26,10 +26,10 @@ body {
     width: 300px;
     height: 300px;
     left: 0;
-    bottom: 90px;
+    bottom: 50px;
     position: absolute;
     z-index: 98;
-    height: 100vh;             /* Altura completa de la ventana */
+    height: 50vh;             /* Altura completa de la ventana */
   margin: 0;
   display: flex;
   justify-content: center;   /* Centra horizontalmente */
