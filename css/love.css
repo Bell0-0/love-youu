@@ -44,7 +44,7 @@ body {
     width: 520px; /* 13 * 40 */
     height: 440px; /* 11 * 40 */
     left: 50%;
-    top: 50%;
+    top: 60%;
     position: absolute;
     margin: -260px 0 0 -220px;
     /*background-color: gray;*/
