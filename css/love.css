@@ -57,86 +57,31 @@ body {
     background-color: yellow;
 }
 
+/* --- CAMBIO 2: Limitar la animación de los corazones a una altura máxima --- */
 .love .block div {
-    width: 40px;
-    height: 20px;
-    position: absolute;
-    background: url("../images/heart.png") no-repeat;
-    background-size: contain;
-    /*background-color: #c40908;*/
-    /*border: 1px solid silver;*/
-    box-sizing: border-box;
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  background: url("../images/heart.png") no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  animation: heart-float 4s linear infinite;
 }
 
-
-/*---------------------- body_center -------------------------*/
-
-/*---------------------- footer -------------------------*/
-@keyframes border {
-    0% {
-        width: 0;
-    }
-    5% {
-        width: 5%;
-    }
-    10% {
-        width: 10%;
-    }
-    15% {
-        width: 15%;
-    }
-    20% {
-        width: 20%;
-    }
-    25% {
-        width: 25%;
-    }
-    30% {
-        width: 30%;
-    }
-    35% {
-        width: 35%;
-    }
-    40% {
-        width: 40%;
-    }
-    45% {
-        width: 45%;
-    }
-    50% {
-        width: 50%;
-    }
-    55% {
-        width: 55%;
-    }
-    60% {
-        width: 60%;
-    }
-    65% {
-        width: 65%;
-    }
-    70% {
-        width: 70%;
-    }
-    75% {
-        width: 75%;
-    }
-    80% {
-        width: 80%;
-    }
-    85% {
-        width: 85%;
-    }
-    90% {
-        width: 90%;
-    }
-    95% {
-        width: 95%;
-    }
-    100% {
-        width: 100%;
-    }
-
+/* --- NUEVA ANIMACIÓN: Detiene los corazones antes de llegar muy arriba --- */
+@keyframes heart-float {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateY(-200px);  /* Cambia este valor si quieres menos altura */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-200px);  /* Detiene en el mismo lugar */
+  }
 }
 .footer {
     bottom: 30px;
@@ -228,8 +173,9 @@ body {
 #question {
   display: none;
   position: fixed;
-  bottom: 500px;
-  right: 40px;
+  bottom: 80px;             /* Más cerca del borde inferior */
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 35px;
   font-style: italic;
   color: #FF4081;
