@@ -42,7 +42,7 @@ body {
 /*---------------------- body_center -------------------------*/
 .container .love {
     width: 400px; /* 13 * 40 */
-    height: 440px; /* 11 * 40 */
+    height: 250px; /* 11 * 40 */
     left: 50%;
     top: 50%;
     position: absolute;
@@ -59,7 +59,7 @@ body {
 
 .love .block div {
     width: 40px;
-    height: 30px;
+    height: 20px;
     position: absolute;
     background: url("../images/heart.png") no-repeat;
     background-size: contain;
@@ -214,7 +214,7 @@ body {
 #love {
   position: relative;
   top: 300px;
-  font-size: 40px;
+  font-size: 20px;
   text-align: center;
   transition: top 0.2s;
 }
@@ -228,7 +228,7 @@ body {
 #question {
   display: none;
   position: fixed;
-  bottom: 250px;
+  bottom: 500px;
   right: 40px;
   font-size: 35px;
   font-style: italic;
